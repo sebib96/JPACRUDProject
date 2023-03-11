@@ -1,5 +1,21 @@
 @charset "UTF-8";
-.cover{
-	width: 150px;
-	height:200px;
+
+.cover {
+	width: 200px;
+	height: 250px;
+}
+
+#homeimg{
+	background-image: url(layered-waves-haikei.svg);
+	background-repeat: no-repeat;
+	background-color: #001220;
+	background-position: fixed;
+	background-position:bottom 0px;
+	background-size: 100%;
+	text-align: center;
+	padding-bottom: 500px;
+}
+
+#homebtn{
+	top:100px;
 }

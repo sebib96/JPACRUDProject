@@ -3,6 +3,8 @@ package com.skilldistillery.mylibrary.data;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
@@ -13,11 +15,11 @@ import com.skilldistillery.mylibrary.entities.Book.Book;
 @Service
 @Transactional
 public class MyLibraryDAOImpl implements MyLibraryDAO {
-	
+
 	@PersistenceContext
 	private EntityManager em;
-	
-	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAMyLibrary");
+
 	@Override
 	public Book findById(int id) {
 		return em.find(Book.class, id);
@@ -31,20 +33,38 @@ public class MyLibraryDAOImpl implements MyLibraryDAO {
 
 	@Override
 	public Book create(Book book) {
-		// TODO Auto-generated method stub
-		return null;
+		em.persist(book);
+		em.flush();
+		return book;
 	}
 
 	@Override
 	public Book update(int id, Book book) {
-		// TODO Auto-generated method stub
-		return null;
+		Book managedBook = em.find(Book.class, id);
+		
+		managedBook.setAuthor(book.getAuthor());
+		managedBook.setDescription(book.getDescription());
+		managedBook.setAuthor(book.getAuthor());
+		managedBook.setCountry(book.getCountry());
+		managedBook.setGenre(book.getGenre());
+		managedBook.setPages(book.getPages());
+		managedBook.setPublishedYear(book.getPublishedYear());
+		managedBook.setPrice(book.getPrice());
+		managedBook.setIsbn(book.getIsbn());
+		
+		return managedBook;
 	}
 
 	@Override
 	public boolean burn(int id) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean success = false;
+		Book book = em.find(Book.class, id);
+		
+		if(book != null) {
+			em.remove(book);
+			success = true;
+		}
+		return success;
 	}
 
 }
