@@ -29,13 +29,13 @@ public class Book {
 	private String genre;
 	
 	@Column(name="pages")
-	private int pages;
+	private Integer pages;
 	
 	@Column(name="published_year")
-	private int publishedYear;
+	private Integer publishedYear;
 	
 	@Column(name="price")
-	private double price;
+	private Double price;
 	
 	@Column(name="isbn")
 	private String isbn;
@@ -45,7 +45,7 @@ public class Book {
 	}
 	
 	public Book(int id, String coverUrl, String title, String description, String author, String country, String genre,
-			int pages, int publishedYear, double price, String isbn) {
+			Integer pages, Integer publishedYear, Double price, String isbn) {
 		super();
 		this.id = id;
 		this.coverUrl = coverUrl;
@@ -59,6 +59,7 @@ public class Book {
 		this.price = price;
 		this.isbn = isbn;
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -101,24 +102,31 @@ public class Book {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	public int getPages() {
+
+	public Integer getPages() {
 		return pages;
 	}
-	public void setPages(int pages) {
+
+	public void setPages(Integer pages) {
 		this.pages = pages;
 	}
-	public int getPublishedYear() {
+
+	public Integer getPublishedYear() {
 		return publishedYear;
 	}
-	public void setPublishedYear(int publishedYear) {
+
+	public void setPublishedYear(Integer publishedYear) {
 		this.publishedYear = publishedYear;
 	}
-	public double getPrice() {
+
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+
+	public void setPrice(Double price) {
 		this.price = price;
 	}
+
 	public String getIsbn() {
 		return isbn;
 	}
