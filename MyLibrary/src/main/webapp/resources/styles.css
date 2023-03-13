@@ -95,15 +95,12 @@ body {
 	animation-fill-mode: forwards;
 }
 
-@
-keyframes fadeInAnimation { 0% {
+@keyframes fadeInAnimation { 
+	0% {
 	opacity: 0;
 }
 
-100
-
-
-%
+100%
 {
 opacity
 
