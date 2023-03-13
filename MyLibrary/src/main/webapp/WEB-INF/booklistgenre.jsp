@@ -25,17 +25,30 @@ style="height: 35px; width: 35px;"></a>
 	<c:when test="${empty books}"><h1>No Books Found</h1></c:when>
 	<c:otherwise>
 		<c:forEach var="book" items="${books}">
-			<li style="list-style: none;">ID: ${book.id}<br>Title: ${book.title}</li>
-			<img class="coverall" src="${book.coverUrl}">
-			<br>
-			<p style="width: 200px; display: table;">
+				<div class="container"
+					style="background-color: #414B53; border-radius: 30px 30px 30px 30px; height: 300px; width: 700px;">
+					<a href="viewbook?id=${book.id}"><img
+						style="width: 220px; height: 300px; text-align: left; border-radius: 30px 0px 0px 30px; margin-left: -10px; padding-right: 10px;"
+						src="${book.coverUrl}"></a>
+					<ul
+						style="list-style: none; float: right; overflow-wrap: break-word; width: 350px; padding-top: 65px; padding-left: 150px;">
+						<li>ID: ${book.id}</li>
+						<li>Title: ${book.title}</li>
+						<li>Author: ${book.author}</li>
+						<li>Genre: ${book.genre}</li>
+						<li>Pages: ${book.pages}</li>
+						<li>Price: $${book.price}</li>
+
+					</ul>
+				</div>
+				<br>
+				<br>
 		</c:forEach>
 	</c:otherwise>
 
 
 </c:choose>
-<div id="homeimg">
-</div>
+<div id="homeimg"></div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

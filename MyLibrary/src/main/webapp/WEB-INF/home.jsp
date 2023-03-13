@@ -35,7 +35,7 @@
 							placeholder="Book ID" aria-label="id"
 							aria-describedby="button-addon2" size="20">
 						<button class="btn btn-outline-secondary" type="submit"
-							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+							role="button" id="button-addon2" style="background-color: #D3D3D3; border: 2px; border-color: #d3d3d3;"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
 					</div>
 				</form>
 
@@ -45,7 +45,7 @@
 							placeholder="Author" aria-label="Genre"
 							aria-describedby="button-addon2" size="20">
 						<button class="btn btn-outline-secondary" type="submit"
-							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+							role="button" id="button-addon2" style="background-color: #D3D3D3; border: 2px; border-color: #d3d3d3;"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
 					</div>
 				</form>
 
@@ -53,9 +53,9 @@
 					<div class="input-group mb-3">
 						<input type="text" name="genre" class="form-control"
 							placeholder="Genre" aria-label="Genre"
-							aria-describedby="button-addon2" size="20">
+							aria-describedby="button-addon2">
 						<button class="btn btn-outline-secondary" type="submit"
-							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+							role="button" id="button-addon2" style="background-color: #D3D3D3; border: 2px; border-color: #d3d3d3;"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
 					</div>
 				</form>
 			</div>

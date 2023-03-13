@@ -58,10 +58,6 @@
 				<li class="bookfield"><strong>Price:</strong> $${book.price}</li>
 				<li class="bookfield"><strong>ISBN:</strong> ${book.isbn}</li>
 			</ul>
-		</c:when>
-		<c:otherwise>No Book Found</c:otherwise>
-	</c:choose>
-
 	<form action="bookburned.do" method="POST"
 		style="padding-top: 10px; padding-left: 15px; position: relative; top: -10px;">
 		<label for="id"></label> <input type="hidden" name="id"
@@ -74,6 +70,10 @@
 			value="${book.id}" /> <input type="submit" class="btn btn-warning"
 			value="Update" />
 	</form>
+		</c:when>
+		<c:otherwise><h1>No Book Found</h1></c:otherwise>
+	</c:choose>
+
 
 
 
