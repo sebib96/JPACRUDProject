@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
 @import
-	url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
-	;
-
-@import
-	url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gudea&display=swap')
+	url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@500;900&display=swap')
 	;
 
 body, html {
@@ -13,29 +9,195 @@ body, html {
 }
 
 .cover {
-	width: 200px;
-	height: 250px;
+	width: 250px;
+	height: 300px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10%;
+}
+.coverall {
+	width: 250px;
+	height: 300px;
+	display: block;
+	border-radius: 10%;
+	/*  cover img class*/
 }
 
 #homeimg {
+	text-align: centre;
 	background-repeat: no-repeat;
 	background-image: url(layered-waves-haikei.svg);
 	background-position: fixed;
 	background-position: bottom 0px;
 	background-size: cover;
 	text-align: center;
-	padding-bottom: 500px;
+	padding-bottom: 400px;
 	height: 100%;
+	background-repeat: no-repeat;
 }
 
 h1 {
+	display: inline;
+	text-align: center;
+	color: #D3D3D3 !important;
 	border-radius: 25px;
-	padding: 30px;
+	padding-top: 200px;
+	padding: 50px;
 	width: 200px;
 	height: 150px;
+	font-family: 'Bebas Neue', cursive;
+	line-height: 150px !important;
+}
+
+h2 {
+	color: #D3D3D3 !important;
 	font-family: 'Bebas Neue', cursive;
 }
 
 .booktext {
+	color: #D3D3D3;
+}
+
+body {
+	background-color: #001220 !important;
+	color: #D3D3D3 !important;
+	font-family: 'Playfair Display', serif !important;
+	font-weight: 500;
 	
+	animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+       opacity: 0;
+       }
+    100% {
+       opacity: 1;
+         }
+         
+}
+li {
+	list-style: none;
+	text-decoration: none !important;
+}
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.accordion {
+  margin-bottom: 1em;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+	position:relative;
+	top: 10px;
+  background-color: #21252A;
+  /* box on click */
+  padding: 15px;
+  border: 2px solid #e8e8e8;
+ 
+  border-radius: 20px 20px 20px 20px;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e8e8e8;
+  border-radius: 20px 20px 20px 20px;
+  width: 100px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  /* search box */
+  position: relative;
+ 
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #d8d8d8;
+}
+
+.accordion .handle label:before {
+  content: "\f054";
+  display: none;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+  
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "\f078";
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #06c;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+h1 {
+  margin: 0 0 1.5em;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.accordion {
+  max-width: 65em;
+}
+
+.accordion p:last-child {
+  margin-bottom: 0;
 }

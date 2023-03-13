@@ -84,6 +84,17 @@ public class BookController {
 			return "home";
 		}
 		return "adderror";
+	}
 	
+	@GetMapping(path= {"booklistauthor"})
+	public String bookSearchAuthor(Model model, String author) {
+		model.addAttribute("books", libraryDao.findByAuthor(author));
+		return "booklistauthor";
+	}
+	
+	@GetMapping(path= {"booklistgenre"})
+	public String bookSearchGenre(Model model, String genre) {
+		model.addAttribute("books", libraryDao.findByGenre(genre));
+		return "booklistgenre";
 	}
 }

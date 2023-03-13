@@ -14,26 +14,59 @@
 	crossorigin="anonymous">
 </head>
 <body>
+
 	<div id="homeimg">
-		<h1>My Books</h1>
-			<div id="landing-wrap">
-				<a class="btn btn-dark" href="allbooks" role="button" id="homebtn">View All Books</a>
-				<br><br> 
-				<a class="btn btn-dark" href="addbook" role="button">Add Book to Library</a>
-				<form action="viewbook" method="GET"> Book ID: <input type="number" name="id" size="4" /> <input
-					type="submit" value="Get Book Data" class="btn btn-info enabled"
-					role="button" aria-disabled="false">
-			</form>
-		</div>
+		<h1><u>My Books</u></h1>
+		<br> <br> <a style="background-color: #E8E8E8; color: #001220;" class="btn btn-dark" href="allbooks"
+			role="button" id="homebtn">ALL BOOKS</a> <br>
+		<br> <a style="background-color: #E8E8E8; color: #001220" class="btn btn-dark" href="addbook" role="button">ADD
+				BOOK &#128221</a> <br> <br>
+		<!--collapsable  -->
+		<section class="accordion">
+			<input type="checkbox" name="collapse" id="handle1" checked="checked">
+			<h2 class="handle">
+				<label for="handle1"><p style="position: relative; top: -4px;">🔎</p></label>
+			</h2>
+			<div class="content">
+				<form action="viewbook" method="GET">
+					<div class="input-group mb-3">
+						<input type="number" name="id" class="form-control"
+							placeholder="Book ID" aria-label="id"
+							aria-describedby="button-addon2" size="20">
+						<button class="btn btn-outline-secondary" type="submit"
+							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+					</div>
+				</form>
+
+				<form action="booklistauthor" method="GET">
+					<div class="input-group mb-3">
+						<input type="text" name="author" class="form-control"
+							placeholder="Author" aria-label="Genre"
+							aria-describedby="button-addon2" size="20">
+						<button class="btn btn-outline-secondary" type="submit"
+							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+					</div>
+				</form>
+
+				<form action="booklistgenre" method="GET">
+					<div class="input-group mb-3">
+						<input type="text" name="genre" class="form-control"
+							placeholder="Genre" aria-label="Genre"
+							aria-describedby="button-addon2" size="20">
+						<button class="btn btn-outline-secondary" type="submit"
+							role="button" id="button-addon2"><img src="resources/searchbtn.svg" style="height:20px; width: 20px;"></button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="accordion">
+			<input type="checkbox" name="collapse2" id="handle2">
+		</section>
+		<!--  -->
 	</div>
-
-
-
-
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
 		crossorigin="anonymous"></script>
-
 </body>
 </html>

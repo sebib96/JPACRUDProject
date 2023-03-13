@@ -1,5 +1,6 @@
 package com.skilldistillery.mylibrary.data;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -65,6 +66,20 @@ public class MyLibraryDAOImpl implements MyLibraryDAO {
 			success = true;
 		}
 		return success;
+	}
+
+	@Override
+	public List<Book> findByAuthor(String author) {
+		author = "%" + author + "%";
+		String jpql ="SELECT b from Book b where author like :author";
+		return em.createQuery(jpql, Book.class).setParameter("author", author).getResultList();
+	}
+
+	@Override
+	public List<Book> findByGenre(String genre) {
+		genre = "%" + genre + "%";
+		String jpql = "SELECT b from Book b where genre like :genre";
+		return em.createQuery(jpql, Book.class).setParameter("genre", genre).getResultList();
 	}
 
 }

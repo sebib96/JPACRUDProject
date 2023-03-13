@@ -18,21 +18,22 @@
 <a class="btn btn-dark" href="home.do" role="button" id=homeButton>Home</a>
 <br>
 <br>
-
-	<h1>In view Book</h1>
 <c:choose>
 	<c:when test="${! empty book }">
-		<h4>Book Title: ${book.title}</h4>
+		<br>
+		<h2 align="center"><u>${book.title}</u></h2>		
 		<img class="cover" src="${book.coverUrl}">
-		<ul>
-			<li>Author: ${book.author}</li>
-			<li>Description: ${book.description}</li>
-			<li>Country: ${book.country}</li>
-			<li>Genre: ${book.genre}</li>
-			<li>Pages: ${book.pages}</li>
-			<li>Year Published: ${book.publishedYear}</li>
-			<li>Price: ${book.price}</li>
-			<li>ISBN: ${book.isbn}</li>
+		<br>
+		<br>
+		<ul style="text-decoration: none;">
+			<li ><strong class="bookfield">Author:</strong> ${book.author}</li>
+			<li><strong class="bookfield">Description:</strong> ${book.description}</li>
+			<li><strong class="bookfield">Country:</strong> ${book.country}</li>
+			<li><strong class="bookfield">Genre:</strong> ${book.genre}</li>
+			<li><strong class="bookfield">Pages:</strong> ${book.pages}</li>
+			<li><strong class="bookfield">Year Published:</strong> ${book.publishedYear}</li>
+			<li><strong class="bookfield">Price:</strong> $${book.price}</li>
+			<li><strong class="bookfield">ISBN:</strong> ${book.isbn}</li>
 		</ul>
 	</c:when>
 	<c:otherwise>No Book Found</c:otherwise>
@@ -41,15 +42,17 @@
 <form action="bookburned.do" method="POST">
 				<label for="id"></label> 
 				<input type="hidden" name="id" value="${book.id}" />
-				<input type="submit" class="btn btn-danger"value="Burn" />
+				<input type="submit" class="btn btn-danger"value="Burn &#128293" />
 </form>
-
+<br>
 <form action="updatebook.do" method="GET">
 			<label for=id></label>
-			<input type="hidden" name="id" value="${book.id }"/>
+			<input type="hidden" name="id" value="${book.id}"/>
 			<input type="submit" class="btn btn-danger" value ="Update"/>
 </form>
-			
+
+
+	
 		<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
