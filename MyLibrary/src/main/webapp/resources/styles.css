@@ -16,6 +16,7 @@ body, html {
 	margin-right: auto;
 	border-radius: 10%;
 }
+
 .coverall {
 	width: 250px;
 	height: 300px;
@@ -35,6 +36,26 @@ body, html {
 	padding-bottom: 400px;
 	height: 100%;
 	background-repeat: no-repeat;
+}
+
+.fwdbtn {
+	position: fixed;
+	left: 150px;
+	top: 15px;
+	background-color: #D3D3D3;
+	border-radius: 20px 20px 20px 20px;
+	padding-right: 4px;
+	padding-left: 13px;
+	
+}
+
+.backbtn {
+	position: fixed;
+	left: 80px;
+	top: 15px;
+	background-color: #D3D3D3;
+	border-radius: 20px 20px 20px 20px;
+	padding-left: 17px;
 }
 
 h1 {
@@ -58,7 +79,8 @@ h2 {
 .booktext {
 	color: #D3D3D3;
 }
-.bookfield{
+
+.bookfield {
 	padding-right: 50px;
 	padding-left: 40px;
 }
@@ -68,140 +90,145 @@ body {
 	color: #D3D3D3 !important;
 	font-family: 'Playfair Display', serif !important;
 	font-weight: 500;
-	
 	animation: fadeInAnimation ease 3s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-@keyframes fadeInAnimation {
-    0% {
-       opacity: 0;
-       }
-    100% {
-       opacity: 1;
-         }
-         
+@
+keyframes fadeInAnimation { 0% {
+	opacity: 0;
+}
+
+100
+
+
+%
+{
+opacity
+
+
+:
+
+
+1
+;
+
+
+}
 }
 li {
 	list-style: none;
 	text-decoration: none !important;
 }
-.accordion > input[type="checkbox"] {
-  position: absolute;
-  left: -100vw;
+
+.accordion>input[type="checkbox"] {
+	position: absolute;
+	left: -100vw;
 }
 
 .accordion .content {
-  overflow-y: hidden;
-  height: 0;
-  transition: height 0.3s ease;
+	overflow-y: hidden;
+	height: 0;
+	transition: height 0.3s ease;
 }
 
-.accordion > input[type="checkbox"]:checked ~ .content {
-  height: auto;
-  overflow: visible;
+.accordion>input[type="checkbox"]:checked ~ .content {
+	height: auto;
+	overflow: visible;
 }
 
 .accordion label {
-  display: block;
+	display: block;
 }
 
 /*
  Styling
 */
 body {
-  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
-  color: #333;
-  font-weight: 300;
+	font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+	color: #333;
+	font-weight: 300;
 }
 
 .accordion {
-  margin-bottom: 1em;
-  margin-left:auto;
-  margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.accordion > input[type="checkbox"]:checked ~ .content {
-	position:relative;
+.accordion>input[type="checkbox"]:checked ~ .content {
+	position: relative;
 	top: 10px;
-  background-color: #21252A;
-  /* box on click */
-  padding: 15px;
-  border: 2px solid #e8e8e8;
- 
-  border-radius: 20px 20px 20px 20px;
+	background-color: #21252A;
+	/* box on click */
+	padding: 15px;
+	border: 2px solid #e8e8e8;
+	border-radius: 20px 20px 20px 20px;
 }
 
 .accordion .handle {
-  margin: 0;
-  font-size: 1.125em;
-  line-height: 1.2em;
-margin-left: auto;
-margin-right: auto;
-
+	margin: 0;
+	font-size: 1.125em;
+	line-height: 1.2em;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .accordion label {
-  color: #333;
-  cursor: pointer;
-  font-weight: normal;
-  padding: 15px;
-  background: #e8e8e8;
-  border-radius: 20px 20px 20px 20px;
-  width: 100px;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  /* search box */
-  position: relative;
- 
+	color: #333;
+	cursor: pointer;
+	font-weight: normal;
+	padding: 15px;
+	background: #e8e8e8;
+	border-radius: 20px 20px 20px 20px;
+	width: 100px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	/* search box */
+	position: relative;
 }
 
-.accordion label:hover,
-.accordion label:focus {
-  background: #d8d8d8;
+.accordion label:hover, .accordion label:focus {
+	background: #d8d8d8;
 }
 
 .accordion .handle label:before {
-  content: "\f054";
-  display: none;
-  margin-right: 10px;
-  font-size: .58em;
-  line-height: 1.556em;
-  vertical-align: middle;
-  
+	content: "\f054";
+	display: none;
+	margin-right: 10px;
+	font-size: .58em;
+	line-height: 1.556em;
+	vertical-align: middle;
 }
 
-.accordion > input[type="checkbox"]:checked ~ .handle label:before {
-  content: "\f078";
+.accordion>input[type="checkbox"]:checked ~ .handle label:before {
+	content: "\f078";
 }
 
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+*, *:before, *:after {
+	box-sizing: border-box;
 }
 
 a {
-  color: #06c;
+	color: #06c;
 }
 
 p {
-  margin: 0 0 1em;
+	margin: 0 0 1em;
 }
 
 h1 {
-  margin: 0 0 1.5em;
-  font-weight: 600;
-  font-size: 1.5em;
+	margin: 0 0 1.5em;
+	font-weight: 600;
+	font-size: 1.5em;
 }
 
 .accordion {
-  max-width: 65em;
+	max-width: 65em;
 }
 
 .accordion p:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
