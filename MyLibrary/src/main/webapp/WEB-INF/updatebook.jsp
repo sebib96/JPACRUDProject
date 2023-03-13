@@ -43,7 +43,7 @@ style="height: 35px; width: 35px;"></a>
 	<input type="number" name="publishedYear" value="${book.publishedYear }"/>
 	<br>	
 	<label for="price">Description:</label>
-	<input type="number" name="price" value="${book.price }"/>
+	<input type="number" step="0.01" name="price" value="${book.price }"/>
 	<br>	
 	<label for="isbn">Description:</label>
 	<input type="text" name="isbn" value="${book.isbn }"/>

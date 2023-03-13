@@ -44,7 +44,7 @@ height: 515px; width: 500px; position: absolute; left: 40px; top: 100px;">
 <input type="number" name="publishedYear" value="">
 <br><br>
 <label for=price>Price in USD:</label>
-<input type="number" name="price" value="">
+<input type="number" step="0.01" name="price" value="">
 <br><br>
 <label for=isbn>ISBN:</label>
 <input type="text" name="isbn" value="">
