@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>My Library</title>
 <link rel="stylesheet" href="resources/styles.css">
+<link rel="icon" type="image/x-icon" href="resources/bookico.svg">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -15,7 +16,9 @@
 	
 </head>
 <body>
-<a class="btn btn-dark" href="home.do" role="button" id=homeButton>Home</a>
+<a class="btn btn-dark" href="home.do" role="button" id=homeButton style="position: relative; top: 15px; left: 15px; background: #D3D3D3">
+<img src="resources/homebtn.svg" 
+style="height: 35px; width: 35px;"></a>
 <br>
 <br>
 <c:choose>
@@ -25,30 +28,30 @@
 		<img class="cover" src="${book.coverUrl}">
 		<br>
 		<br>
-		<ul style="text-decoration: none;">
-			<li ><strong class="bookfield">Author:</strong> ${book.author}</li>
-			<li><strong class="bookfield">Description:</strong> ${book.description}</li>
-			<li><strong class="bookfield">Country:</strong> ${book.country}</li>
-			<li><strong class="bookfield">Genre:</strong> ${book.genre}</li>
-			<li><strong class="bookfield">Pages:</strong> ${book.pages}</li>
-			<li><strong class="bookfield">Year Published:</strong> ${book.publishedYear}</li>
-			<li><strong class="bookfield">Price:</strong> $${book.price}</li>
-			<li><strong class="bookfield">ISBN:</strong> ${book.isbn}</li>
+		<ul style="text-decoration: none; background-color: #414B53; height: auto; width: 950px;
+		 position: relative; left: 50px; border-radius: 20px 20px 20px 20px;">
+			<li class="bookfield"><strong>Author:</strong>  ${book.author}</li>
+			<li class="bookfield"><strong>Description:</strong>  ${book.description}</li>
+			<li class="bookfield"><strong>Country:</strong>  ${book.country}</li>
+			<li class="bookfield"><strong>Genre:</strong>  ${book.genre}</li>
+			<li class="bookfield"><strong>Pages:</strong>  ${book.pages}</li>
+			<li class="bookfield"><strong>Year Published:</strong>  ${book.publishedYear}</li>
+			<li class="bookfield"><strong>Price:</strong>  $${book.price}</li>
+			<li class="bookfield"><strong >ISBN:</strong>  ${book.isbn}</li>
 		</ul>
 	</c:when>
 	<c:otherwise>No Book Found</c:otherwise>
 </c:choose>
 
-<form action="bookburned.do" method="POST">
+<form action="bookburned.do" method="POST" style="padding-top: 10px; padding-left: 15px; position: relative; top: -10px;">
 				<label for="id"></label> 
 				<input type="hidden" name="id" value="${book.id}" />
 				<input type="submit" class="btn btn-danger"value="Burn &#128293" />
 </form>
-<br>
-<form action="updatebook.do" method="GET">
+<form action="updatebook.do" method="GET" style="padding-top: 10px; padding-left: 15px; position: relative; top: -10px;">
 			<label for=id></label>
 			<input type="hidden" name="id" value="${book.id}"/>
-			<input type="submit" class="btn btn-danger" value ="Update"/>
+			<input type="submit" class="btn btn-warning" value ="Update"/>
 </form>
 
 

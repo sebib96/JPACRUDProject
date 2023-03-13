@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>Library</title>
 <link rel="stylesheet" href="resources/styles.css">
+<link rel="icon" type="image/x-icon" href="resources/bookico.svg">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -15,7 +16,10 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<a class="btn btn-dark" href="home.do" role="button" id=homeButton>Home</a>
+	<a class="btn btn-dark" href="home.do" role="button" id=homeButton
+		style="position: fixed; top: 15px; left: 15px; background: #D3D3D3">
+		<img src="resources/homebtn.svg" style="height: 35px; width: 35px;">
+	</a>
 	<br>
 	<br>
 
@@ -23,19 +27,24 @@
 		<c:when test="${empty books}">No Books Found</c:when>
 		<c:otherwise>
 			<c:forEach var="book" items="${books}">
-				<div class="container" style="background-color: #414B53; border-radius: 30px 30px 30px 30px; height: 300px; width: 700px;">
-					<img style="width: 220px; height: 300px; text-align: left; border-radius: 30px 0px 0px 30px;margin-left: -10px;" src="${book.coverUrl}">
-					<ul style="list-style: none; float: right; overflow-wrap: break-word; width: 350px; padding-top: 65px; padding-left: 150px; ">
+				<div class="container"
+					style="background-color: #414B53; border-radius: 30px 30px 30px 30px; height: 300px; width: 700px;">
+					<a href="viewbook?id=${book.id}"><img
+						style="width: 220px; height: 300px; text-align: left; border-radius: 30px 0px 0px 30px; margin-left: -10px;"
+						src="${book.coverUrl}"></a>
+					<ul
+						style="list-style: none; float: right; overflow-wrap: break-word; width: 350px; padding-top: 65px; padding-left: 150px;">
 						<li>ID: ${book.id}</li>
 						<li>Title: ${book.title}</li>
 						<li>Author: ${book.author}</li>
 						<li>Genre: ${book.genre}</li>
 						<li>Pages: ${book.pages}</li>
 						<li>Price: $${book.price}</li>
-						<div style="clear: left;"/>
+						<div style="clear: left;" />
 					</ul>
 				</div>
-				<br><br>
+				<br>
+				<br>
 			</c:forEach>
 
 		</c:otherwise>

@@ -58,6 +58,10 @@ h2 {
 .booktext {
 	color: #D3D3D3;
 }
+.bookfield{
+	padding-right: 50px;
+	padding-left: 40px;
+}
 
 body {
 	background-color: #001220 !important;

@@ -13,7 +13,9 @@
 	crossorigin="anonymous">
 </head>
 <body>
-<a class="btn btn-dark" href="home.do" role="button" id=homeButton>Home</a>
+<a class="btn btn-dark" href="home.do" role="button" id=homeButton style="position: relative; top: 15px; left: 15px; background: #D3D3D3">
+<img src="resources/homebtn.svg" 
+style="height: 35px; width: 35px;"></a>
 <br>
 <br>
 <h1>In updatebook.jsp</h1>

@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Add Book</title>
     <link rel="stylesheet" href="resources/styles.css">
+    <link rel="icon" type="image/x-icon" href="resources/bookico.svg">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -13,40 +14,44 @@
 	crossorigin="anonymous">
 </head>
 <body>
-<a class="btn btn-dark" href="home.do" role="button" id=homeButton>Home</a>
+<a class="btn btn-dark" href="home.do" role="button" id=homeButton style="position: relative; top: 15px; left: 15px; background: #D3D3D3">
+<img src="resources/homebtn.svg" 
+style="height: 35px; width: 35px;"></a>
 <br>
 <br>
 
-<form action="bookadded" method="POST">
+<form action="bookadded" method="POST" style="padding-left: 20px; padding-top: 30px; background-color: #D3D3D3; color: #001220; border-radius: 30px 30px 30px 30px;
+height: 515px; width: 500px; position: absolute; left: 40px; top: 100px;">
 <label for=title>Title:</label>
 <input type="text" name="title" value="">
-<br>
+<br><br>
 <label for=description>Description:</label>
 <input type="text" name="description" value="">
-<br>
+<br><br>
 <label for=author>Author:</label>
 <input type="text" name="author" value="">
-<br>
+<br><br>
 <label for=country>Country:</label>
 <input type="text" name="country" value="">
-<br>
+<br><br>
 <label for=genre>Genre</label>
 <input type="text" name="genre" value="">
-<br>
+<br><br>
 <label for=pages>Number of Pages:</label>
 <input type="number" name="pages" value="">
-<br>
+<br><br>
 <label for=publishedYear>Year of Publication:</label>
 <input type="number" name="publishedYear" value="">
-<br>
+<br><br>
 <label for=price>Price in USD:</label>
 <input type="number" name="price" value="">
-<br>
+<br><br>
 <label for=isbn>ISBN:</label>
 <input type="text" name="isbn" value="">
-<br>
+<br><br>
 
-<input type="submit" class="btn btn-success" value="Add Book">
+<input type="image" class="btn btn-success" src=resources/addbook.svg style="height: 45px; width: 45px; position: relative; top: -42px; left: 435px; 
+border-radius: 30px 0px 30px 0px">
 
 </form>
 
